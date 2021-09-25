@@ -10,7 +10,7 @@ def main
   stub = Scaler::Scaler::Stub.new(hostname, :this_channel_is_insecure)
   begin
     response = stub.scale(request)
-    puts response.to_json
+    puts response
   rescue GRPC::BadStatus => e
     abort "ERROR: #{e.message}"
   end
